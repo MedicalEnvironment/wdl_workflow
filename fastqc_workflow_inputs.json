@@ -1,0 +1,5 @@
+{
+    "fastqc_workflow.input_fastq_R1": "/home_beegfs/akbar01/material/03_example_data/R1",
+    "fastqc_workflow.input_fastq_R2": "/home_beegfs/akbar01/material/03_example_data/R2"
+  }
+  
