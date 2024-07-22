@@ -1,3 +1,8 @@
+# Deploying a WDL Sub-Workflow with FastQC and Singularity
+
+This repository guides you through deploying a WDL sub-workflow using the FastQC Docker image, converted to Singularity format. The workflow will be executed using the Cromwell engine.
+
+
 # Directories
 
 ## WDL/
@@ -10,10 +15,6 @@ All the necessary files to run the `.wdl` file are located here so you could run
 - `install_fastqc.sh`: Script to install FastQC.
 - `run_fastqc.sh`: Script to test the functionality of bash, singularity, and FastQC.
 
-
-# Deploying a WDL Sub-Workflow with FastQC and Singularity
-
-This repository guides you through deploying a WDL sub-workflow using the FastQC Docker image, converted to Singularity format. The workflow will be executed using Cromwell.
 
 ## Directory Structure
 
