@@ -1,6 +1,16 @@
 #TO FIX:
 #Basically the problem is that the HOME dericcotry does not endicate exactly where should the output be written in
 
+#Main error: 
+#[akbar01@ui-2 execution]$ cat stderr
+#Error for command "exec": requires at least 2 arg(s), only received 1
+
+#Usage:
+#  singularity [global options...] exec [exec options...] <container> <command>
+
+#Run 'singularity --help' for more detailed usage information.
+#/mnt/beegfs2/home/akbar01/cromwell-executions/fastqc_workflow/e3294d64-11f2-4e94-bfba-b236e9b41e6b/call-fastqc_task_R2/execution/script: line 30: ${basename(input_fastq)}_fastqc.html: bad substitution
+
 version 1.0
 
 workflow fastqc_workflow {

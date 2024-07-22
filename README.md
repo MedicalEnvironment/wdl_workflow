@@ -1,15 +1,15 @@
 # Directories
 
-WDL/
-   /cromwell.conf
-   /fastqc_subworkflow.wdl
-   /fastqc_workflow_inputs.json
-All the necessary files to run .wdl file are located here so you could run the sub-workflow with no issues. 
+## WDL/
+- `cromwell.conf`: Configuration file for Cromwell.
+- `fastqc_subworkflow.wdl`: Subworkflow WDL file.
+- `fastqc_workflow_inputs.json`: Input JSON file for the FastQC workflow.
+All the necessary files to run the `.wdl` file are located here so you could run the sub-workflow with no issues.
 
-fastqc/
-   /install_fastqc.sh
-   /run_fastqc.sh
-FastQC installation script and test to check the functionality of bash, singularity and fastqc.
+## fastqc/
+- `install_fastqc.sh`: Script to install FastQC.
+- `run_fastqc.sh`: Script to test the functionality of bash, singularity, and FastQC.
+
 
 # Deploying a WDL Sub-Workflow with FastQC and Singularity
 
