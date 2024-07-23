@@ -40,6 +40,7 @@ Load the required modules:
 ```bash
 module avail
 module load singularity/3.11.4 java/jdk-21.0.2
+```
 
 ### 2. Running the fastqc scripts
 
@@ -50,6 +51,7 @@ Run the following commands in order to install and test the functionality of fas
 ```bash
 bash install_fastqc.sh
 bash run_fastqc.sh
+```
 
 ### 3. WDL and Its Components
 
