@@ -13,8 +13,8 @@ version 1.0
 
 workflow fastqc_workflow {
     input {
-        File input_fastq_R1
-        File input_fastq_R2
+	File input_fastq_R1
+    File input_fastq_R2
     }
 
     call pull_fastqc_image
@@ -32,53 +32,49 @@ workflow fastqc_workflow {
     }
 
     output {
-    File output_html_R1 = "/path-to-cromwell-output/cromwell-output/${fastqc_task_R1.output_html}"
-    File output_zip_R1 = "/path-to-cromwell-output/cromwell-output/${fastqc_task_R1.output_zip}"
-    File output_html_R2 = "/path-to-cromwell-output/cromwell-output/${fastqc_task_R2.output_html}"
-    File output_zip_R2 = "/path-to-cromwell-output/cromwell-output/${fastqc_task_R2.output_zip}"
-}
-
+	Array[File] output_html = [fastqc_task_R1.output_html, fastqc_task_R2.output_html]
+    Array[File] output_zip = [fastqc_task_R1.output_zip, fastqc_task_R2.output_zip]
+    }
 }
 
 task pull_fastqc_image {
     input {}
 
-    #to change HOME directory to the existing one on a server
-    command {
+    command <<<
         singularity pull docker://biocontainers/fastqc:v0.11.9_cv8
-        mv fastqc_v0.11.9_cv8.sif ${HOME}/.singularity/cache/oci-tmp/fastqc_v0.11.9_cv8.sif 
-    } 
-    
+        mv fastqc_v0.11.9_cv8.sif /path-to-your-.sif/fastqc_v0.11.9_cv8.sif
+    >>>
 
     output {
-        File singularity_image = "${HOME}/.singularity/cache/oci-tmp/fastqc_v0.11.9_cv8.sif" 
-    }   
+	File singularity_image = "/path-to-your-.sif/fastqc_v0.11.9_cv8.sif"
+    }
 
     runtime {
-        docker: "singularityware/singularity:3.5"
-        memory: "4G" #some issues seems to be accured here, even though with no "GB" syntax
-        cpu: 1
+	singularity: "/path-to-your-.sif/fastqc_v0.11.9_cv8.sif"
     }
 }
 
 task fastqc_task {
     input {
-        File input_fastq
-        File singularity_image
-    }   
-
-    command {
-        singularity exec ${singularity_image} fastqc ${input_fastq}
+	File input_fastq
+    File singularity_image
     }
 
+    command <<<
+        mkdir -p fastqc_results
+        singularity exec ${singularity_image} fastqc ${input_fastq}
+
+        # Explicitly copy output files to prevent hard links
+        cp ${basename(input_fastq)}_fastqc.html fastqc_results/
+        cp ${basename(input_fastq)}_fastqc.zip fastqc_results/
+    >>>
+
     output {
-        File output_html = "${basename(input_fastq)}_fastqc.html"
-        File output_zip = "${basename(input_fastq)}_fastqc.zip"
+	File output_html = "fastqc_results/${basename(input_fastq)}_fastqc.html"
+        File output_zip = "fastqc_results/${basename(input_fastq)}_fastqc.zip"
     }
 
     runtime {
-        singularity: "fastqc_v0.11.9_cv8.sif"
-        memory: "4G" #some issues seems to be accured here, even though with no "GB" string 
-        cpu: 2
+	singularity: "${singularity_image}"
     }
 }
