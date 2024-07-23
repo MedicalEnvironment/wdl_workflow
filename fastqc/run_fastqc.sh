@@ -24,5 +24,5 @@ for file in "$data_dir"/*.fastq.gz; do
     echo "Processing the file [$filename]."
 
     # run FastQC on the current file using Singularity
-    singularity run -B "$data_dir":/data -B "$output_dir":/output /home_beegfs/akbar01/fastqc_v0.11.9_cv8.sif fastqc /data/"$filename" -o /output
+    singularity run -B "$data_dir":/data -B "$output_dir":/output /path-to-.sif-file/fastqc_v0.11.9_cv8.sif fastqc /data/"$filename" -o /output
 done

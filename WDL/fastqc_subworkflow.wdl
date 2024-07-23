@@ -1,5 +1,3 @@
-#TO FIX:
-#Basically the problem is that the HOME dericcotry does not endicate exactly where should the output be written in
 
 #Main error: 
 #[akbar01@ui-2 execution]$ cat stderr
@@ -34,10 +32,10 @@ workflow fastqc_workflow {
     }
 
     output {
-    File output_html_R1 = "/home_beegfs/akbar01/cromwell-output/${fastqc_task_R1.output_html}"
-    File output_zip_R1 = "/home_beegfs/akbar01/cromwell-output/${fastqc_task_R1.output_zip}"
-    File output_html_R2 = "/home_beegfs/akbar01/cromwell-output/${fastqc_task_R2.output_html}"
-    File output_zip_R2 = "/home_beegfs/akbar01/cromwell-output/${fastqc_task_R2.output_zip}"
+    File output_html_R1 = "/path-to-cromwell-output/cromwell-output/${fastqc_task_R1.output_html}"
+    File output_zip_R1 = "/path-to-cromwell-output/cromwell-output/${fastqc_task_R1.output_zip}"
+    File output_html_R2 = "/path-to-cromwell-output/cromwell-output/${fastqc_task_R2.output_html}"
+    File output_zip_R2 = "/path-to-cromwell-output/cromwell-output/${fastqc_task_R2.output_zip}"
 }
 
 }
