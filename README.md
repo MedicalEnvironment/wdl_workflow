@@ -1,6 +1,6 @@
 # 🚀 FastQC Quality Control with WDL & Singularity 🔬
 
-[![FastQC Logo](https://www.mayo.edu/-/media/kcms/gbs/research/images/2019/02/06/15/18/genetics-bioinformatics-shu-571040611-8col.jpg)](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+[![FastQC Logo](https://genomicsengland.imgix.net/images/Technology/Bioinformatics-and-data-hands.jpg?auto=format%2Ccompress&fit=max&q=80&w=1200&s=950955ef2fb07d99e2411d5f1078cc2f)](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
 Streamline your sequencing data quality control with this easy-to-use WDL (Workflow Description Language) sub-workflow! Powered by FastQC and Singularity containers, you can ensure consistent and reliable QC analysis across different environments.
 
