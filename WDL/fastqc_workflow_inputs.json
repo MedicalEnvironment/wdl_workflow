@@ -1,5 +1,8 @@
 {
-    "fastqc_workflow.input_fastq_R1": "/path-to-your-R1/R1",
-    "fastqc_workflow.input_fastq_R2": "/path-to-your-R2/R2"
-  }
-  
+  "fastQCWorkflow.dataDir": "/home_beegfs/akbar01/material/03_example_data/R1", 
+  "fastQCWorkflow.fastqFiles": [
+      "Wt1_R1_001.fastq.gz",
+      "Wt2_R1_001.fastq.gz",
+      "Wt3_R1_001.fastq.gz"
+      ]
+}
