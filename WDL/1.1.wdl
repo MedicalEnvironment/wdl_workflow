@@ -1,4 +1,4 @@
-version 1.0
+version development-1.1
 
 task pullFastQCDocker {
     command {
@@ -16,22 +16,23 @@ task runFastQC {
         String dataDir
     }
 
+    # Compute the base name for output files
     String baseName = sub(fastqFile, "\\.fastq\\.gz$", "")
-    
+
     command {
         # Set locale to avoid warnings
         export LC_ALL=C
         export LANG=C
         
-        # Use your own directory for output
-        singularity run -B ${dataDir}:/data ${imageFile} fastqc /data/${fastqFile} -o /home_beegfs/akbar01/data/fastqc_output/ 
+        # Run FastQC and specify the output directory
+        singularity run -B ${dataDir}:/data ${imageFile} fastqc /data/${fastqFile} -o /home_beegfs/akbar01/data/fastqc_output/
     }
-    
+
     output {
-        File fastqcOutput = "/home_beegfs/akbar01/data/fastqc_output/${baseName}_fastqc.zip"  # provide your own directory in order to get the declared output file
+        File fastqcZip = "/home_beegfs/akbar01/data/fastqc_output/${baseName}_fastqc.zip"
+        File fastqcHtml = "/home_beegfs/akbar01/data/fastqc_output/${baseName}_fastqc.html"
     }
 }
-
 
 workflow fastQCWorkflow {
     input {
@@ -51,6 +52,7 @@ workflow fastQCWorkflow {
     }
 
     output {
-        Array[File] outputFiles = runFastQC.fastqcOutput
+        Array[File] fastqcZips = runFastQC.fastqcZip
+        Array[File] fastqcHtmls = runFastQC.fastqcHtml
     }
 }
