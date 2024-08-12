@@ -15,6 +15,8 @@ task runFastQC {
         String fastqFile
         String dataDir
     }
+
+    String baseName = sub(fastqFile, "\\.fastq\\.gz$", "")
     
     command {
         # Set locale to avoid warnings
@@ -26,7 +28,7 @@ task runFastQC {
     }
     
     output {
-        File fastqcOutput = "/home_beegfs/akbar01/data/fastqc_output/${fastqFile}_fastqc.zip"  # provide your own directory in order to get the declared output file
+        File fastqcOutput = "/home_beegfs/akbar01/data/fastqc_output/${baseName}_fastqc.zip"  # provide your own directory in order to get the declared output file
     }
 }
 
