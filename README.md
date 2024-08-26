@@ -1,4 +1,4 @@
-![WDL Workfow](https://www.rsu.lv/sites/default/files/imce/logotipi/RSU_logo_bez_fona_horizontals.png)
+![WDL Workfow](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmFd-EPn6jktivbaVRs2MKwPaHNYycBHS8r-Nwz3MNbwPhuuOCm9JBc0PzKISwCIPigA&usqp=CAU)
 
 # Docker Installation Guide
 
