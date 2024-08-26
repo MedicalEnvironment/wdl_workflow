@@ -47,7 +47,7 @@ Replace username, server_address, and /path/to/local/directory/ with your actual
 bash
 Copy code
 ```scp -r username@server_address:/home/groups/rsu/your_username/ /path/to/local/directory/```
-`-r` stands for recursive, which is necessary if you are copying directories.
+-r stands for recursive, which is necessary if you are copying directories.
 Make sure to replace username with your server username, server_address with the server’s address, and /path/to/local/directory/ with the path where you want to store the files on your local machine.
 
 # FastQC Quality Control with WDL & Singularity 
