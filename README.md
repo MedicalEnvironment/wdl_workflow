@@ -14,7 +14,7 @@ Streamline your sequencing data quality control with this easy-to-use WDL (Workf
 ## 📁 Directory Structure
 
 *   **WDL:**
-    *   `cromwell.conf`: Configuration settings for the Cromwell engine.
+    *   `cromwell-fixed.conf`: Configuration settings for the Cromwell engine.
     *   `fastqc_subworkflow.wdl`: Defines the FastQC workflow steps and logic.
     *   `fastqc_workflow_inputs.json`: Example input parameters to get you started.
 *   **fastqc:**
