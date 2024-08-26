@@ -1,3 +1,31 @@
+# Docker Installation Guide
+
+Before getting started to work with the WDL workflow please make sure you get yourself familiar with Docker and Docker Hub
+
+## Windows
+
+To install Docker Desktop on Windows, follow the instructions provided in the official Docker documentation:
+- [Install Docker Desktop on Windows | Docker Docs](https://docs.docker.com/desktop/install/windows-install/)
+
+For a visual guide, you can also refer to the following YouTube tutorial:
+- [How To Install Docker on Windows? A Step-by-Step Guide (youtube.com)](https://www.youtube.com/watch?v=XXXXX)
+
+## Mac
+
+To install Docker Desktop on Mac, follow the instructions provided in the official Docker documentation:
+- [Install Docker Desktop on Mac | Docker Docs](https://docs.docker.com/desktop/install/mac-install/)
+
+For additional help, you can view this YouTube video:
+- [How To Install Docker on Mac / MacOS (2024) (youtube.com)](https://www.youtube.com/watch?v=XXXXX)
+
+## Linux
+
+To install Docker Desktop on Linux, follow the instructions provided in the official Docker documentation:
+- [Install Docker Desktop on Linux | Docker Docs](https://docs.docker.com/desktop/install/linux-install/)
+
+For a detailed guide specific to Ubuntu, check out this YouTube tutorial:
+- [Docker Installation In Ubuntu | How To Install Docker In Ubuntu? | Docker Installation | Simplilearn (youtube.com)](https://www.youtube.com/watch?v=XXXXX)
+
 # FastQC Quality Control with WDL & Singularity 
 
 Streamline your sequencing data quality control with this easy-to-use WDL (Workflow Description Language) sub-workflow! Powered by FastQC and Singularity containers, you can ensure consistent and reliable QC analysis across different environments.
@@ -21,7 +49,7 @@ Streamline your sequencing data quality control with this easy-to-use WDL (Workf
     *   `install_fastqc.sh`: Script to install FastQC.
     *   `run_fastqc.sh`: Script to test your FastQC and Singularity setup.
 
-## 🛠️ Prerequisites
+## 🛠️ System Prerequisites 
 
 Before diving in, make sure you have the following tools ready:
 
