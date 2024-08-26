@@ -81,6 +81,20 @@ cd ../WDL
 java -Dconfig.file=cromwell-fixed.conf -jar cromwell-87.jar run fastqc_subworkflow.wdl --inputs fastqc_workflow_inputs.json
 ```
 
+### 4. FastQC Output
+The FastQC workflow generates two types of output files:
+
+1. **.zip File:** This is a compressed archive containing basic statistics and quality metrics about the sequence data. It includes files like `fastqc_data.txt` with detailed metrics and `summary.txt` with a quick overview.
+
+2. **.html File:** This is a report file that provides a visual summary of the quality checks, which can be viewed in any web browser.
+
+To unzip the `.zip` file, use the following command in the terminal:
+```bash
+unzip filename.zip
+```
+Replace `filename.zip` with the actual name of the `.zip` file.
+
+
 ### What is WDL?
 
 WDL (Workflow Description Language) is a language used to describe data processing workflows. It provides a way to specify tasks and their dependencies in a structured format, making it easier to automate and manage complex data analysis pipelines. WDL is often used with Cromwell, an open-source workflow management system that runs WDL scripts.
