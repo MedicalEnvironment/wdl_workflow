@@ -1,5 +1,4 @@
 ![RSU Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmFd-EPn6jktivbaVRs2MKwPaHNYycBHS8r-Nwz3MNbwPhuuOCm9JBc0PzKISwCIPigA&usqp=CAU)
-![WDL Workflow](https://vsmalladi.github.io/openwdl.github.io//media/logo-preview.png)
 
 # Docker Installation Guide
 
