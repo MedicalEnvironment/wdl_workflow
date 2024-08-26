@@ -1,3 +1,5 @@
+![WDL Workfow](https://vsmalladi.github.io/openwdl.github.io//media/logo-preview.png)
+
 # Docker Installation Guide
 
 Before getting started to work with the WDL workflow please make sure you get yourself familiar with Docker and Docker Hub
