@@ -39,11 +39,15 @@ To access documents and other useful materials from the server, follow these ste
    Enter the following command to navigate to the directory containing the documents:
    ```bash
    cd /home/groups/rsu/your_username/
-Copy Files to Your Local Machine Use the scp command (secure copy) to transfer files from the server to your local machine. Replace username, server_address, and /path/to/local/directory/ with your actual username, server address, and local directory path respectively:
+Copy Files to Your Local Machine.
+
+Use the scp command (secure copy) to transfer files from the server to your local machine. 
+
+Replace username, server_address, and /path/to/local/directory/ with your actual username, server address, and local directory path respectively:
 bash
 Copy code
 ```scp -r username@server_address:/home/groups/rsu/your_username/ /path/to/local/directory/```
--r stands for recursive, which is necessary if you are copying directories.
+## -r stands for recursive, which is necessary if you are copying directories.
 Make sure to replace username with your server username, server_address with the server’s address, and /path/to/local/directory/ with the path where you want to store the files on your local machine.
 
 # FastQC Quality Control with WDL & Singularity 
