@@ -1,9 +1,0 @@
-{
-  "fastQCWorkflow.dataDir": "/home_beegfs/akbar01/material/03_example_data/R1",
-  "fastQCWorkflow.fastqFiles": [
-      "Wt1_R1_001.fastq.gz",
-      "Wt2_R1_001.fastq.gz",
-      "Wt3_R1_001.fastq.gz"
-      ]
-}
-
