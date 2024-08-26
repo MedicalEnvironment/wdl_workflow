@@ -101,7 +101,7 @@ WDL (Workflow Description Language) is a language used to describe data processi
 
 ### Why Do We Need These Three Files?
 
-1. **cromwell.conf**
+1. **cromwell-fixed.conf**
    - **Purpose**: This file contains configuration settings for the Cromwell engine. It includes information such as backend configurations, database settings, and runtime options.
    - **Importance**: Proper configuration ensures that Cromwell can correctly execute workflows using the specified computational resources and settings.
 
