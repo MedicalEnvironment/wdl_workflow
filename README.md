@@ -24,7 +24,27 @@ To install Docker Desktop on Linux, follow the instructions provided in the offi
 - [Install Docker Desktop on Linux | Docker Docs](https://docs.docker.com/desktop/install/linux-install/)
 
 For a detailed guide specific to Ubuntu, check out this YouTube tutorial:
-- [Docker Installation In Ubuntu | How To Install Docker In Ubuntu? | Docker Installation | Simplilearn (youtube.com)](https://www.youtube.com/watch?v=XXXXX)
+- [Docker Installation In Ubuntu | How To Install Docker In Ubuntu? | Docker Installation | Simplilearn (youtube.com)](https://www.youtube.com/watch?v=cqbh-RneBlk)
+
+Guides: https://docs.docker.com/guides/
+Manuals: https://docs.docker.com/manuals/
+
+## Accessing Documents and Materials
+
+To access documents and other useful materials from the server, follow these steps:
+
+1. **Open Your Terminal**
+
+2. **Change Directory to Access Files**
+   Enter the following command to navigate to the directory containing the documents:
+   ```bash
+   cd /home/groups/rsu/your_username/
+Copy Files to Your Local Machine Use the scp command (secure copy) to transfer files from the server to your local machine. Replace username, server_address, and /path/to/local/directory/ with your actual username, server address, and local directory path respectively:
+bash
+Copy code
+```scp -r username@server_address:/home/groups/rsu/your_username/ /path/to/local/directory/```
+-r stands for recursive, which is necessary if you are copying directories.
+Make sure to replace username with your server username, server_address with the server’s address, and /path/to/local/directory/ with the path where you want to store the files on your local machine.
 
 # FastQC Quality Control with WDL & Singularity 
 
