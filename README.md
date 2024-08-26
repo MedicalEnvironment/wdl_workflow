@@ -1,4 +1,4 @@
-![WDL Workfow](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmFd-EPn6jktivbaVRs2MKwPaHNYycBHS8r-Nwz3MNbwPhuuOCm9JBc0PzKISwCIPigA&usqp=CAU)
+![WDL Workfow](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmFd-EPn6jktivbaVRs2MKwPaHNYycBHS8r-Nwz3MNbwPhuuOCm9JBc0PzKISwCIPigA&usqp=CAU)(https://cdn.image.st-hatena.com/image/square/f697e78953a5137d8b56d2afda8339cb41649514/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Fbroadinstitute.gallerycdn.vsassets.io%2Fextensions%2Fbroadinstitute%2Fwdl-devtools%2F0.0.90%2F1713893478294%2FMicrosoft.VisualStudio.Services.Icons.Default)
 
 # Docker Installation Guide
 
