@@ -78,7 +78,7 @@ cd ../WDL
 
 3. Execute the workflow:
 ```bash
-java -Dconfig.file=cromwell.conf -jar cromwell-87.jar run fastqc_subworkflow.wdl --inputs fastqc_workflow_inputs.json
+java -Dconfig.file=cromwell-fixed.conf -jar cromwell-87.jar run fastqc_subworkflow.wdl --inputs fastqc_workflow_inputs.json
 ```
 
 ### What is WDL?
