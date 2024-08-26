@@ -10,7 +10,7 @@ To install Docker Desktop on Windows, follow the instructions provided in the of
 - [Install Docker Desktop on Windows | Docker Docs](https://docs.docker.com/desktop/install/windows-install/)
 
 For a visual guide, you can also refer to the following YouTube tutorial:
-- [How To Install Docker on Windows? A Step-by-Step Guide (youtube.com)](https://www.youtube.com/watch?v=XXXXX)
+- [How To Install Docker on Windows? A Step-by-Step Guide (youtube.com)]([https://www.youtube.com/watch?v=XXXXX](https://www.youtube.com/watch?v=ZyBBv1JmnWQ))
 
 ## Mac
 
@@ -18,7 +18,7 @@ To install Docker Desktop on Mac, follow the instructions provided in the offici
 - [Install Docker Desktop on Mac | Docker Docs](https://docs.docker.com/desktop/install/mac-install/)
 
 For additional help, you can view this YouTube video:
-- [How To Install Docker on Mac / MacOS (2024) (youtube.com)](https://www.youtube.com/watch?v=XXXXX)
+- [How To Install Docker on Mac / MacOS (2024) (youtube.com)]([https://www.youtube.com/watch?v=XXXXX](https://www.youtube.com/watch?v=-EXlfSsP49A))
 
 ## Linux
 
