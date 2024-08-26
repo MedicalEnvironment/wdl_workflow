@@ -29,6 +29,116 @@ For a detailed guide specific to Ubuntu, check out this YouTube tutorial:
 Guides: https://docs.docker.com/guides/
 Manuals: https://docs.docker.com/manuals/
 
+## Building a Docker Image for FASTQC
+
+This guide details the steps to build a Docker image containing the FASTQC tool.
+
+**Prerequisites:**
+
+* Docker installed on your local machine.
+
+**Steps:**
+
+1. **Create a Dockerfile:**
+
+   * Start by creating a new file named `Dockerfile` (no extension) in a new directory.
+   * Open the `Dockerfile` using your preferred text editor (e.g., `vim`, `nano`).
+
+2. **Choose a base image:**
+
+   * In the `Dockerfile`, specify a base image to build upon. This example uses the official Ubuntu image:
+
+     ```dockerfile
+     FROM ubuntu:latest
+     ```
+
+3. **Install dependencies:**
+
+   * Install any required dependencies for FASTQC. Here, we need `openjdk-11-jre-headless` for Java and `unzip` to extract the downloaded tool.
+
+     ```dockerfile
+     RUN apt-get update && apt-get install -y openjdk-11-jre-headless unzip
+     ```
+
+4. **Download FASTQC:**
+
+   * Download the FASTQC tool from the official source within the Docker image using `wget`:
+
+     ```dockerfile
+     RUN wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip && unzip fastqc_v0.11.9.zip
+     ```
+
+5. **Set permissions:**
+
+   * Grant execute permissions for the FASTQC script:
+
+     ```dockerfile
+     RUN chmod +x /FastQC/fastqc
+     ```
+
+6. **Set the entry point:**
+
+   * Define the entry point for the Docker image, specifying the command to run when the container starts.  Here, set it to the FASTQC tool:
+
+     ```dockerfile
+     ENTRYPOINT ["/FastQC/fastqc"]
+     ```
+
+7. **Build the Docker image:**
+
+   * Save the `Dockerfile`.
+   * Navigate to the directory containing the `Dockerfile` in your terminal.
+   * Build the image using the following command:
+
+     ```bash
+     docker build -t fastqc-image .
+     ```
+
+     * Replace `fastqc-image` with a desired name for your image.
+
+8. **Verify the image:**
+
+   * Check if the image was built successfully by running:
+
+     ```bash
+     docker images
+     ```
+
+     * You should see an entry listing your image name, tag (usually `latest`), image ID, creation time, and size.
+
+9. **Save the image (optional):**
+
+   * To save the image as a compressed archive file for future use, run:
+
+     ```bash
+     docker save e476358bd157 | gzip > fastqc_v0.11.9_image.tar.gz
+     ```
+
+     * Replace `e476358bd157` with the actual image ID obtained from step 8.
+
+10. **(Optional) Push the image to Docker Hub:**
+
+   * Create a Docker Hub account ([https://hub.docker.com/](https://hub.docker.com/)) if you want to share the image publicly.
+   * Tag the image with your desired username and repository name:
+
+     ```bash
+     docker tag fastqc-image <your_username>/<repository_name>:fastqc_v0.11.9
+     ```
+
+     * Replace `<your_username>` and `<repository_name>` with your actual details.
+
+   * Push the tagged image to Docker Hub:
+
+     ```bash
+     docker push <your_username>/<repository_name>:fastqc_v0.11.9
+     ```
+
+**Additional Notes:**
+
+* You can use this Docker image to run FASTQC commands within a containerized environment.
+* The provided version of FASTQC (v0.11.9) can be updated by modifying the download URL in the `Dockerfile`.
+* Refer to the official FASTQC documentation for detailed usage instructions: [invalid URL removed] 
+
 ## Accessing Documents and Materials
 
 To access documents and other useful materials from the server, follow these steps:
