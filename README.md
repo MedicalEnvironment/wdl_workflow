@@ -67,7 +67,7 @@ bash install_fastqc.sh
 bash run_fastqc.sh
 ```
 
-### 3. Run the Workflow
+### 4. Run the Workflow
 
 1. Navigate to the WDL directory:
 ```bash
@@ -81,7 +81,7 @@ cd ../WDL
 java -Dconfig.file=cromwell-fixed.conf -jar cromwell-87.jar run fastqc_subworkflow.wdl --inputs fastqc_workflow_inputs.json
 ```
 
-### 4. FastQC Output
+### 5. FastQC Output
 The FastQC workflow generates two types of output files:
 
 1. **.zip File:** This is a compressed archive containing basic statistics and quality metrics about the sequence data. It includes files like `fastqc_data.txt` with detailed metrics and `summary.txt` with a quick overview.
