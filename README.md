@@ -43,12 +43,30 @@ Copy Files to Your Local Machine.
 
 Use the scp command (secure copy) to transfer files from the server to your local machine. 
 
-Replace username, server_address, and /path/to/local/directory/ with your actual username, server address, and local directory path respectively:
-bash
-Copy code
-```scp -r username@server_address:/home/groups/rsu/your_username/ /path/to/local/directory/```
--r stands for recursive, which is necessary if you are copying directories.
-Make sure to replace username with your server username, server_address with the server’s address, and /path/to/local/directory/ with the path where you want to store the files on your local machine.
+## Copying Files from a Remote Server with scp
+
+This guide explains how to use the `scp` command to securely copy files from a remote server to your local machine.
+
+**Instructions:**
+
+1. **Replace placeholders:** 
+    * `username`: Replace this with your actual username on the remote server.
+    * `server_address`: Replace this with the IP address or hostname of the remote server.
+    * `/path/to/local/directory/`: This is the directory on your local machine where you want to store the copied files.
+
+2. **Run the command:**
+
+   ```bash
+   scp -r username@server_address:/home/groups/rsu/your_username/ /path/to/local/directory/
+-r: This flag tells scp to copy directories recursively, meaning it will copy all files and sub-directories within the source directory.
+Important:
+
+Make sure you have SSH access enabled on the remote server.
+You might be prompted for your password when connecting to the server.
+Additional Notes:
+
+You can also use scp to copy files from your local machine to the remote server. Just swap the source and destination paths in the command.
+
 
 # FastQC Quality Control with WDL & Singularity 
 
