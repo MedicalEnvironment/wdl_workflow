@@ -1,4 +1,4 @@
-![WDL Workfow](https://vsmalladi.github.io/openwdl.github.io//media/logo-preview.png)
+![WDL Workfow](https://www.rsu.lv/sites/default/files/imce/logotipi/RSU_logo_bez_fona_horizontals.png)
 
 # Docker Installation Guide
 
