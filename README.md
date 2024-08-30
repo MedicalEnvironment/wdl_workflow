@@ -10,7 +10,7 @@ Before getting started with WDL, it's recommended to familiarize yourself with D
 
 Streamline your sequencing data quality control with this easy-to-use WDL (Workflow Description Language) sub-workflow! Powered by FastQC and Singularity containers, you can ensure consistent and reliable QC analysis across different environments.
 
-**Author:** Akbar Abayev, RSU Bioinformatics Group
+**Authors:** Akbar Abayev, Baiba Vilne. RSU Bioinformatics Group
 
 ## ✨ Key Features
 
