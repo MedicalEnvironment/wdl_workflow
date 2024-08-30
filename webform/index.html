@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Installation Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Docker Installation Guide</h1>
+        <p>Before getting started with the WDL workflow, please make sure you're familiar with Docker and Docker Hub.</p>
+        
+        <h2>Windows</h2>
+        <p>To install Docker Desktop on Windows, follow the instructions provided in the official Docker documentation:</p>
+        <ul>
+            <li><a href="https://docs.docker.com/desktop/install/windows-install/" target="_blank">Install Docker Desktop on Windows | Docker Docs</a></li>
+        </ul>
+        <p>For a visual guide, you can also refer to the following YouTube tutorial:</p>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=ZyBBv1JmnWQ" target="_blank">How To Install Docker on Windows? A Step-by-Step Guide (YouTube)</a></li>
+        </ul>
+
+        <h2>Mac</h2>
+        <p>To install Docker Desktop on Mac, follow the instructions provided in the official Docker documentation:</p>
+        <ul>
+            <li><a href="https://docs.docker.com/desktop/install/mac-install/" target="_blank">Install Docker Desktop on Mac | Docker Docs</a></li>
+        </ul>
+        <p>For additional help, you can view this YouTube video:</p>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=-EXlfSsP49A" target="_blank">How To Install Docker on Mac / MacOS (2024) (YouTube)</a></li>
+        </ul>
+
+        <h2>Linux</h2>
+        <p>To install Docker Desktop on Linux, follow the instructions provided in the official Docker documentation:</p>
+        <ul>
+            <li><a href="https://docs.docker.com/desktop/install/linux-install/" target="_blank">Install Docker Desktop on Linux | Docker Docs</a></li>
+        </ul>
+        <p>For a detailed guide specific to Ubuntu, check out this YouTube tutorial:</p>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=cqbh-RneBlk" target="_blank">Docker Installation In Ubuntu | How To Install Docker In Ubuntu? | Docker Installation | Simplilearn (YouTube)</a></li>
+        </ul>
+
+        <h2>Building a Docker Image for FASTQC</h2>
+        <p>This guide details the steps to build a Docker image containing the FASTQC tool.</p>
+
+        <h3>Prerequisites:</h3>
+        <ul>
+            <li>Docker installed on your local machine.</li>
+        </ul>
+
+        <h3>Steps:</h3>
+        <ol>
+            <li>Create a Dockerfile: 
+                <ul>
+                    <li>Start by creating a new file named <code>Dockerfile</code> in a new directory.</li>
+                    <li>Open the <code>Dockerfile</code> using your preferred text editor (e.g., vim, nano).</li>
+                </ul>
+            </li>
+            <li>Choose a base image: 
+                <pre><code>FROM ubuntu:latest</code></pre>
+            </li>
+            <li>Install dependencies: 
+                <pre><code>RUN apt-get update && apt-get install -y openjdk-11-jre-headless unzip</code></pre>
+            </li>
+            <li>Download FASTQC: 
+                <pre><code>RUN wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip && unzip fastqc_v0.11.9.zip</code></pre>
+            </li>
+            <li>Set permissions: 
+                <pre><code>RUN chmod +x /FastQC/fastqc</code></pre>
+            </li>
+            <li>Set the entry point: 
+                <pre><code>ENTRYPOINT ["/FastQC/fastqc"]</code></pre>
+            </li>
+            <li>Build the Docker image: 
+                <pre><code>docker build -t fastqc-image .</code></pre>
+            </li>
+            <li>Verify the image:
+                <pre><code>docker images</code></pre>
+            </li>
+            <li>Save the image (optional):
+                <pre><code>docker save e476358bd157 | gzip > fastqc_v0.11.9_image.tar.gz</code></pre>
+            </li>
+            <li>Push the image to Docker Hub:
+                <ul>
+                    <li>Create a Docker Hub account.</li>
+                    <li>Tag the image: 
+                        <pre><code>docker tag fastqc-image your_username/repository_name:fastqc_v0.11.9</code></pre>
+                    </li>
+                    <li>Push the image:
+                        <pre><code>docker push your_username/repository_name:fastqc_v0.11.9</code></pre>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>Accessing Documents and Materials</h2>
+        <p>To access documents and materials from the server, follow these steps:</p>
+        <ol>
+            <li>Open your terminal.</li>
+            <li>Navigate to the directory:
+                <pre><code>cd /home/groups/rsu/your_username/</code></pre>
+            </li>
+        </ol>
+
+        <h3>Copying Files from a Remote Server with scp</h3>
+        <p>Use the <code>scp</code> command to securely copy files from a remote server to your local machine:</p>
+        <pre><code>scp -r username@server_address:/home/groups/rsu/your_username/ /path/to/local/directory/</code></pre>
+        <p>This command recursively copies all files from the source directory to the local machine.</p>
+
+        <p>For more detailed Docker guides and manuals, visit:</p>
+        <ul>
+            <li><a href="https://docs.docker.com/guides/" target="_blank">Docker Guides</a></li>
+            <li><a href="https://docs.docker.com/manuals/" target="_blank">Docker Manuals</a></li>
+        </ul>
+    </div>
+</body>
+</html>
