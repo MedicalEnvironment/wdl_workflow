@@ -110,13 +110,9 @@ It's recommended to include all necessary files and directories within your `wdl
 By following these steps, you can ensure your Cromwell workflow has the proper configuration and resources to run successfully. 
 
 
-### 4. Run the Workflow
+### 4. Running WDL Workflows on RTU HPC
 
-Here's the `README.md` file without the "Additional Notes" section:
-
-# Running WDL Workflows on RTU HPC
-
-This guide explains how to set up and run WDL (Workflow Description Language) workflows on the RTU HPC server, focusing on integrating the FastQC tool for quality control in sequencing data analysis. This setup leverages Docker and Singularity to maximize flexibility and portability.
+This section explains how to set up and run WDL (Workflow Description Language) workflows on the RTU HPC server, focusing on integrating the FastQC tool for quality control in sequencing data analysis. This setup leverages Docker and Singularity to maximize flexibility and portability.
 
 ## Prerequisites
 - Ensure you have your RTU HPC username and password ready.
