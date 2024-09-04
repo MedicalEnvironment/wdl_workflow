@@ -44,9 +44,6 @@ This section introduces building WDL (Workflow Description Language) workflows w
     *   `cromwell.conf`: Configuration settings for the Cromwell engine.
     *   `fastqc_subworkflow.wdl`: Defines the FastQC workflow steps and logic.
     *   `fastqc_workflow_inputs.json`: Example input parameters to get you started.
-*   **fastqc:**
-    *   `install_fastqc.sh`: Script to install FastQC.
-    *   `run_fastqc.sh`: Script to test your FastQC and Singularity setup.
 
 ## 🛠️ System Prerequisites 
 
