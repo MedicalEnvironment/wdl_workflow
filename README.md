@@ -50,7 +50,7 @@ This section introduces building WDL (Workflow Description Language) workflows w
 Before diving in, make sure you have the following tools ready:
 
 *   **RTU HPC account and familiarity with the environment:** [HPC User Manual - RTU HPC 2.6 documentation](https://hpc-guide.rtu.lv/)
-**Docker:** (Optional) If you want to build your own FastQC image.
+*   **Docker:** (Optional) If you want to build your own FastQC image.
 *   **Singularity:** v3.11.4 or later. Learn more about Singularity: [Introduction to Singularity Containers](https://bioinformaticsworkbook.org/Appendix/HPC/Containers/Intro_Singularity.html#gsc.tab=0)
 *   **Java JDK:** v21.0.2 or compatible.
 *   **Cromwell:** An open-source workflow management system. 
@@ -231,7 +231,7 @@ For further assistance, consult the documentation for:
 
 Your contributions are valued! Please open issues or submit pull requests to enhance this workflow.
 
-In case of any questions/concerns my email address: akbaba@rsu.lv
+In case of any questions/concerns my email address akbaba@rsu.lv and Head of the Bioinformatics group **Baiba Vilne** baiba.vilne@rsu.lv
 
 Happy QC-ing! 🎉
 
