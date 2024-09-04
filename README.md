@@ -53,6 +53,7 @@ Before diving in, make sure you have the following tools ready:
 *   **Docker:** (Optional) If you want to build your own FastQC image.
 *   **Singularity:** v3.11.4 or later. Learn more about Singularity: [Introduction to Singularity Containers](https://bioinformaticsworkbook.org/Appendix/HPC/Containers/Intro_Singularity.html#gsc.tab=0)
 *   **Java JDK:** v21.0.2 or compatible.
+*   **WOMtool:** [Command line utilities for interacting with the Workflow Object Model (WOM)](https://cromwell.readthedocs.io/en/stable/WOMtool/)
 *   **Cromwell:** An open-source workflow management system. 
     *   [Introduction to Cromwell](https://cromwell.readthedocs.io/en/stable/tutorials/FiveMinuteIntro/)
     *   [Cromwell Configuration for Singularity](https://cromwell.readthedocs.io/en/stable/getting_started/#using-singularity)
