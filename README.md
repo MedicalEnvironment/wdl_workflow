@@ -114,7 +114,6 @@ By following these steps, you can ensure your Cromwell workflow has the proper c
 
 Here's the `README.md` file without the "Additional Notes" section:
 
-```markdown
 # Running WDL Workflows on RTU HPC
 
 This guide explains how to set up and run WDL (Workflow Description Language) workflows on the RTU HPC server, focusing on integrating the FastQC tool for quality control in sequencing data analysis. This setup leverages Docker and Singularity to maximize flexibility and portability.
