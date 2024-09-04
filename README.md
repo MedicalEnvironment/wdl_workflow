@@ -10,11 +10,11 @@ Before getting started with WDL, it's recommended to familiarize yourself with D
 
 When setting up your workflow, ensure to replace the tilde (`~`) with your actual home directory or the specific directory paths in the JSON input file, WDL script, and Cromwell configuration file. This is crucial for correctly locating your container files and specifying where the output files should be written.
 
-1. **JSON Files**: Replace `~` with your home directory or the desired path.
+1. **fastqc_workflow_inputs.json**: Replace `~` with your home directory or the desired path.
    
-2. **WDL Scripts**: Ensure all paths, such as input directories and output locations, use the full directory path instead of `~`.
+2. **fastqc_subworkflow.wdl**: Ensure all paths, such as input directories and output locations, use the full directory path instead of `~`.
 
-3. **Cromwell Configuration Files**: Update any paths containing `~` with the actual directory paths.
+3. **cromwell.conf**: Update any paths containing `~` with the actual directory paths.
 
 Additionally, confirm that these directories exist and grant the necessary permissions for the workflow to function correctly:
 
@@ -178,15 +178,23 @@ If you encounter any issues related to the directories and permissions, please r
 ### 5. FastQC Output
 The FastQC workflow generates two types of output files:
 
-1. **.zip File:** This is a compressed archive containing basic statistics and quality metrics about the sequence data. It includes files like `fastqc_data.txt` with detailed metrics and `summary.txt` with a quick overview.
+1. **.zip File:** This is a compressed archive containing basic statistics and quality metrics about the sequence data. It includes files like `fastqc_data.txt` with detailed metrics and `summary.txt` with a quick overview. To view the content of the `.zip` file without extracting it, you can use the following command:
+   ```bash
+   zipinfo -1 filename.zip
+   ```
+   Replace `filename.zip` with the actual name of the `.zip` file.
 
-2. **.html File:** This is a report file that provides a visual summary of the quality checks, which can be viewed in any web browser.
+2. **.html File:** This is a report file that provides a visual summary of the quality checks, which can be viewed in any web browser. To view the `.html` file using a text-based web browser, you can use `lynx` with the following command:
+   ```bash
+   lynx filename.html
+   ```
+   Replace `filename.html` with the actual name of the `.html` file.
 
 To unzip the `.zip` file, use the following command in the terminal:
-```bash
-unzip filename.zip
-```
-Replace `filename.zip` with the actual name of the `.zip` file.
+   ```bash
+   unzip filename.zip
+   ```
+   Replace `filename.zip` with the actual name of the `.zip` file.
 
 
 ### What is WDL?
