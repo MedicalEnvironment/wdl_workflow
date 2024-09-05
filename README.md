@@ -44,18 +44,16 @@ This section introduces building WDL (Workflow Description Language) workflows w
     *   `cromwell.conf`: Configuration settings for the Cromwell engine.
     *   `fastqc_subworkflow.wdl`: Defines the FastQC workflow steps and logic.
     *   `fastqc_workflow_inputs.json`: Example input parameters to get you started.
-*   **fastqc:**
-    *   `install_fastqc.sh`: Script to install FastQC.
-    *   `run_fastqc.sh`: Script to test your FastQC and Singularity setup.
 
 ## 🛠️ System Prerequisites 
 
 Before diving in, make sure you have the following tools ready:
 
 *   **RTU HPC account and familiarity with the environment:** [HPC User Manual - RTU HPC 2.6 documentation](https://hpc-guide.rtu.lv/)
-**Docker:** (Optional) If you want to build your own FastQC image.
+*   **Docker:** (Optional) If you want to build your own FastQC image.
 *   **Singularity:** v3.11.4 or later. Learn more about Singularity: [Introduction to Singularity Containers](https://bioinformaticsworkbook.org/Appendix/HPC/Containers/Intro_Singularity.html#gsc.tab=0)
 *   **Java JDK:** v21.0.2 or compatible.
+*   **WOMtool:** [Command line utilities for interacting with the Workflow Object Model (WOM)](https://cromwell.readthedocs.io/en/stable/WOMtool/)
 *   **Cromwell:** An open-source workflow management system. 
     *   [Introduction to Cromwell](https://cromwell.readthedocs.io/en/stable/tutorials/FiveMinuteIntro/)
     *   [Cromwell Configuration for Singularity](https://cromwell.readthedocs.io/en/stable/getting_started/#using-singularity)
@@ -114,11 +112,11 @@ By following these steps, you can ensure your Cromwell workflow has the proper c
 
 This section explains how to set up and run WDL (Workflow Description Language) workflows on the RTU HPC server, focusing on integrating the FastQC tool for quality control in sequencing data analysis. This setup leverages Docker and Singularity to maximize flexibility and portability.
 
-## Prerequisites
+### Prerequisites
 - Ensure you have your RTU HPC username and password ready.
 - Familiarize yourself with Docker and Singularity, as they will be used to containerize the workflow.
 
-## Steps to Run the Workflow
+### Steps to Run the Workflow
 
 1. **Log in to the RTU HPC Server**
 
@@ -234,7 +232,7 @@ For further assistance, consult the documentation for:
 
 Your contributions are valued! Please open issues or submit pull requests to enhance this workflow.
 
-In case of any questions/concerns my email address: akbaba@rsu.lv
+In case of any questions/concerns my email address akbaba@rsu.lv and Head of the Bioinformatics group **Baiba Vilne** baiba.vilne@rsu.lv
 
 Happy QC-ing! 🎉
 
