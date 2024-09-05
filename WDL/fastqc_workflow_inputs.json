@@ -1,7 +1,10 @@
 {
   "fastqc_subworkflow.outputDir": "~/input_data",
   "fastqc_subworkflow.imageFile": [
-      "~/containers/fastqc_v0.11.9_cv8.sif"
-      ]
+    "~/containers/fastqc_v0.11.9_cv8.sif"
+  ],
+  "fastQCWorkflow.dataDir": "~/directory_path",
+  "fastQCWorkflow.fastqFiles": [
+    "~/input_data"
+  ]
 }
-
