@@ -59,8 +59,7 @@ Before diving in, make sure you have the following tools ready:
     ```bash
     wget https://github.com/broadinstitute/cromwell/releases/download/87/cromwell-87.jar
     ```
-
-* In this case, you’ve downloaded the cromwell-87.jar file into your current directory. [Here is the link](https://github.com/broadinstitute/cromwell/releases/download/87/cromwell-87.jar) to download the `.jar` file. The same process applies to the WOMtool installation [Link](https://github.com/broadinstitute/cromwell/releases/download/87/womtool-87.jar).
+In this case, you’ve downloaded the cromwell-87.jar file into your current directory. [Here is the link](https://github.com/broadinstitute/cromwell/releases/download/87/cromwell-87.jar) to download the `.jar` file. The same process applies to the WOMtool installation [Link](https://github.com/broadinstitute/cromwell/releases/download/87/womtool-87.jar).
 *   **RTU HPC account and familiarity with the environment:** [HPC User Manual - RTU HPC 2.6 documentation](https://hpc-guide.rtu.lv/)
 *   **Docker:** (Optional) If you want to build your own FastQC image.
 *   **Singularity:** v3.11.4 or later. Learn more about Singularity: [Introduction to Singularity Containers](https://bioinformaticsworkbook.org/Appendix/HPC/Containers/Intro_Singularity.html#gsc.tab=0)
