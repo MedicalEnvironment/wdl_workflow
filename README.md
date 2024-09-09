@@ -24,7 +24,7 @@ chmod 775 /path/to/output_data
 chmod 775 /path/to/containers
 ```
 
-This setup ensures the workflow can access and write to the specified directories without issues.
+**Important note**: Make sure that after creating the `~/containers` directory, you pull the Singularity image. Instructions will be provided further.
 
 # Building WDL Workflows with Containers: A FastQC Example
 
