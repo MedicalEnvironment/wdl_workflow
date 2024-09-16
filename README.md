@@ -188,6 +188,10 @@ This section explains how to set up and run WDL (Workflow Description Language) 
    ```bash
    java -jar womtool-87.jar inputs fastqc_subworkflow.wdl > fastqc_subworkflow_inputs.json
    ```
+6. **Run the workflow**
+   ```bash
+   java -Dconfig.file=cromwell.conf -jar cromwell-87.jar run fastqc_subworkflow.wdl --inputs fastqc_subworkflow_inputs.json
+   ```
 
 If you encounter any issues related to the directories and permissions, please refer to the section **Setting Up Directory Paths in Configuration Files**.
 
