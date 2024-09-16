@@ -22,7 +22,8 @@ Additionally, confirm that these directories exist and grant the necessary permi
 ```bash
 chmod 775 /path/to/output_data
 chmod 775 /path/to/containers
-chmod 775 /path/to/input_data
+chmod 775 /path/to/input_directory_path
+chmod 775 /path/to/input_files
 chmod 775 /path/to/cromwell-executions
 chmod 775 /path/to/cromwell-workflow-logs
 chmod 775 /path/to/singularity_cache
