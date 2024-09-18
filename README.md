@@ -28,6 +28,12 @@ chmod 775 /path/to/cromwell-subworkflow-logs
 chmod 775 /path/to/singularity_cache
 ```
 
+Or to simplify the command above you can enter this one:
+
+```bash
+chmod 775 /path/to/common_directory/{output_data,containers,input_data,cromwell-executions,cromwell-subworkflow-logs,singularity_cache}
+```
+
 **Important note**: Make sure that after creating the `~/containers` directory, you pull the Singularity image. Instructions will be provided further.
 
 # Building WDL Workflows with Containers: A FastQC Example
