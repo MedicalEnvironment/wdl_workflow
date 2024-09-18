@@ -17,7 +17,14 @@ When setting up your workflow, ensure to replace the tilde (`~`) with your actua
 
 3. **cromwell.conf**: Update any paths containing `~` with the actual directory paths.
 
-Additionally, confirm that these directories exist and grant the necessary permissions for the workflow to function correctly:
+Additionally, create and confirm that these directories exist and grant the necessary permissions for the workflow to function correctly:
+
+To create the necessary directories:
+
+```bash
+mkdir output_data containers cromwell-executions cromwell-subworkflow-logs singularity_cache
+```
+To confirm that these directories exist and grant the necessary permissions
 
 ```bash
 chmod 775 /path/to/output_data
@@ -34,7 +41,7 @@ Or to simplify the command above you can enter this one:
 chmod 775 /path/to/common_directory/{output_data,containers,input_data,cromwell-executions,cromwell-subworkflow-logs,singularity_cache}
 ```
 
-**Important note**: Make sure that after creating the `~/containers` directory, you pull the Singularity image. Instructions will be provided further.
+**Important note**: Make sure that after creating the `~/containers` directory, you pull the Singularity image within this directory. Instructions will be provided further.
 
 # Building WDL Workflows with Containers: A FastQC Example
 
