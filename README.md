@@ -25,7 +25,7 @@ chmod 775 /path/to/containers
 chmod 775 /path/to/input_directory_path
 chmod 775 /path/to/input_files
 chmod 775 /path/to/cromwell-executions
-chmod 775 /path/to/cromwell-workflow-logs
+chmod 775 /path/to/cromwell-subworkflow-logs
 chmod 775 /path/to/singularity_cache
 ```
 
