@@ -9,13 +9,11 @@ Before getting started with WDL, it's recommended to familiarize yourself with D
 
 # Setting Up Directory Paths in Configuration Files
 
-When setting up your workflow, ensure to replace the tilde (`~`) with your actual home directory or the specific directory paths in the JSON input file, WDL script, and Cromwell configuration file. This is crucial for correctly locating your container files and specifying where the output files should be written.
+When setting up your workflow, ensure to replace the tilde (`~`) with your actual home directory or the specific directory paths in the JSON input file and Cromwell configuration file. This is crucial for correctly locating your container files and specifying where the output files should be written.
 
 1. **fastqc_subworkflow_inputs.json**: Replace `~` with your home directory or the desired path.
-   
-2. **fastqc_subworkflow.wdl**: Ensure all paths, such as input directories and output locations, use the full directory path instead of `~`.
 
-3. **cromwell.conf**: Update any paths containing `~` with the actual directory paths.
+2. **cromwell.conf**: Update any paths containing `~` with the actual directory paths.
 
 Additionally, create and confirm that these directories exist and grant the necessary permissions for the workflow to function correctly:
 
