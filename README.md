@@ -8,32 +8,21 @@ Before getting started with WDL, it's recommended to familiarize yourself with D
 **Link to the documentation -** https://medicalenvironment.github.io/docker-webpage/
 
 # Server Access Instructions
-**Logging into the Server**
+**Log in to the RTU HPC Server**
 
-Before running the workflow, ensure you have access to the necessary server environment. 
+   Open the Terminal on your local computer (or PowerShell for Windows) and log in to the RTU HPC server using your username and password:
 
-**Follow the steps below to log into the server:**
+   ```bash
+   ssh <your_rtu_hpc_username>@ui-2.hpc.rtu.lv
+   ```
+   Replace `<your_rtu_hpc_username>` with the one provided by the RTU HPC team.
 
-Obtain your server credentials:
+   You'll be prompted to enter your RTU HPC password:
 
-* **Username:** Your assigned username.
-* **Server domain:** The address of the server (e.g., server.example.com).
-* **Password:** Your designated password.
-
-**Log in via SSH:**
-
-Open a terminal on your local machine.
-
-Use the following command to log into the server:
-
-```bash
-ssh username@server_domain
-```
-* **Replace username with your assigned username and server_domain with the server’s domain (e.g., server.example.com).**
-
-* **Enter your password when prompted.**
-
-After successfully logging in, you will have access to the server’s terminal.
+   ```bash
+   <your_rtu_hpc_username>@ui-2.hpc.rtu.lv's password: <your_rtu_hpc_password>
+   ```
+   Replace `<your_rtu_hpc_password>` with the password provided by the RTU HPC team.
 
 # Setting Up Directory Paths in Configuration Files
 
@@ -180,23 +169,7 @@ This section explains how to set up and run WDL (Workflow Description Language) 
 
 ### Steps to Run the Workflow
 
-1. **Log in to the RTU HPC Server**
-
-   Open the Terminal on your local computer (or PowerShell for Windows) and log in to the RTU HPC server using your username and password:
-
-   ```bash
-   ssh <your_rtu_hpc_username>@ui-2.hpc.rtu.lv
-   ```
-   Replace `<your_rtu_hpc_username>` with the one provided by the RTU HPC team.
-
-   You'll be prompted to enter your RTU HPC password:
-
-   ```bash
-   <your_rtu_hpc_username>@ui-2.hpc.rtu.lv's password: <your_rtu_hpc_password>
-   ```
-   Replace `<your_rtu_hpc_password>` with the password provided by the RTU HPC team.
-
-2. **Navigate to Your Workflow Directory**
+1. **Navigate to Your Workflow Directory**
 
    After logging in, navigate to the directory where you would like to run the workflow (by default, you will be in your `/home` directory):
 
@@ -208,7 +181,7 @@ This section explains how to set up and run WDL (Workflow Description Language) 
    /mnt/beegfs2/home/<your_rtu_hpc_username>/wdl/wdl-tests
    ```
 
-3. **Clone the WDL Workflow Repository**
+2. **Clone the WDL Workflow Repository**
 
    Use the `git clone` command followed by the URL of the repository. You can find the URL on the repository’s GitHub page by clicking the “Code” button and copying the URL.
 
@@ -216,7 +189,7 @@ This section explains how to set up and run WDL (Workflow Description Language) 
    git clone https://github.com/RSU-Bioinformatics-Group/wdl_workflow.git
    ```
 
-4. **Validate the WDL Script Using Womtool**
+3. **Validate the WDL Script Using Womtool**
 
    Navigate to the WDL directory and validate the WDL script to ensure it is correctly formatted:
 
@@ -224,7 +197,7 @@ This section explains how to set up and run WDL (Workflow Description Language) 
    java -jar womtool-87.jar validate fastqc_subworkflow.wdl
    ```
 
-5. **Run the workflow**
+4. **Run the workflow**
    ```bash
    java -Dconfig.file=cromwell.conf -jar cromwell-87.jar run fastqc_subworkflow.wdl --inputs fastqc_subworkflow_inputs.json
    ```
