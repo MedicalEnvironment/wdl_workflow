@@ -16,9 +16,9 @@ Before running the workflow, ensure you have access to the necessary server envi
 
 Obtain your server credentials:
 
-* **Username: Your assigned username.**
-* **Server domain: The address of the server (e.g., server.example.com).**
-* **Password: Your designated password.**
+* **Username:** Your assigned username.
+* **Server domain:** The address of the server (e.g., server.example.com).
+* **Password:** Your designated password.
 
 **Log in via SSH:**
 
@@ -223,7 +223,7 @@ This section explains how to set up and run WDL (Workflow Description Language) 
    ```bash
    java -jar womtool-87.jar validate fastqc_subworkflow.wdl
    ```
-   
+
 5. **Run the workflow**
    ```bash
    java -Dconfig.file=cromwell.conf -jar cromwell-87.jar run fastqc_subworkflow.wdl --inputs fastqc_subworkflow_inputs.json
