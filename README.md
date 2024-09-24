@@ -7,6 +7,34 @@ Before getting started with WDL, it's recommended to familiarize yourself with D
 
 **Link to the documentation -** https://medicalenvironment.github.io/docker-webpage/
 
+# Server Access Instructions
+**Logging into the Server**
+
+Before running the workflow, ensure you have access to the necessary server environment. 
+
+**Follow the steps below to log into the server:**
+
+Obtain your server credentials:
+
+* **Username: Your assigned username.**
+* **Server domain: The address of the server (e.g., server.example.com).**
+* **Password: Your designated password.**
+
+**Log in via SSH:**
+
+Open a terminal on your local machine.
+
+Use the following command to log into the server:
+
+```bash
+ssh username@server_domain
+```
+* **Replace username with your assigned username and server_domain with the server’s domain (e.g., server.example.com).**
+
+* **Enter your password when prompted.**
+
+After successfully logging in, you will have access to the server’s terminal.
+
 # Setting Up Directory Paths in Configuration Files
 
 When setting up your workflow, ensure to replace the tilde (`~`) with your actual home directory or the specific directory paths in the JSON input file and Cromwell configuration file. This is crucial for correctly locating your container files and specifying where the output files should be written.
@@ -195,15 +223,8 @@ This section explains how to set up and run WDL (Workflow Description Language) 
    ```bash
    java -jar womtool-87.jar validate fastqc_subworkflow.wdl
    ```
-
-5. **Generate a Template for the Input JSON File**
-
-   Generate a template for the required inputs to the WDL workflow:
-
-   ```bash
-   java -jar womtool-87.jar inputs fastqc_subworkflow.wdl > fastqc_subworkflow_inputs.json
-   ```
-6. **Run the workflow**
+   
+5. **Run the workflow**
    ```bash
    java -Dconfig.file=cromwell.conf -jar cromwell-87.jar run fastqc_subworkflow.wdl --inputs fastqc_subworkflow_inputs.json
    ```
