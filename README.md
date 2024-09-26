@@ -26,7 +26,7 @@ Before getting started with WDL, it's recommended to familiarize yourself with D
 
 # Setting Up Directory Paths in Configuration Files
 
-When setting up your workflow, ensure to replace the tilde (`~`) with your actual home directory or the specific directory paths in the JSON input file and Cromwell configuration file. This is crucial for correctly locating your container files and specifying where the output files should be written.
+After cloning this repository with the command `git clone <repository_url>`, ensure to replace the tilde (`~`) with your actual home directory or the specific directory paths in the JSON input file and Cromwell configuration file. This is crucial for correctly locating your container files and specifying where the output files should be written.
 
 1. **fastqc_subworkflow_inputs.json**: Replace `~` with your home directory or the desired path.
 
@@ -134,12 +134,12 @@ singularity pull --docker-login docker://<your_docker_username>/<docker_image_na
 
 ### 3. Important Note: 
 
-Before running your Cromwell workflow, ensure the `cromwell.conf` file is properly configured, especially regarding directory paths. 
+Before running your Cromwell workflow, ensure the `cromwell.conf` and `fastqc_subworkflow_inputs.json` files are properly configured, especially regarding directory paths. 
 
 **Permissions and Directory Verification:**
 
 * **Input, Output, and Container Directories:** 
-    * Verify the existence of all directories mentioned in the `cromwell.conf` file, including input, output, and container directories.
+    * Verify the existence of all directories mentioned in the `cromwell.conf` and `fastqc_subworkflow_inputs.json` files, including input, output, and container directories.
     * Make sure these directories have the correct permissions: Read, Write, and Execute permissions are required.
     * Double-check that the specified paths within the configuration file are valid.
 * **Missing Directories:**
