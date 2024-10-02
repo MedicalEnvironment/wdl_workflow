@@ -1,7 +1,7 @@
 {
     "project_name": "wdl_workflow",
     "description": "A workflow for performing QC on FastQ files using FastQC, including Cromwell configuration and input data files.",
-    "version": "1.0",
+    "version": "0.11.9",
     "authors": [
       {
         "name": "Akbar Abayev",
@@ -40,6 +40,6 @@
     ],
     "data_directory": "input_data",
     "output_directory": "output_data",
-    "container": "docker"
+    "container": "singularity"
   }
   
